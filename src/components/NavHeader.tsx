@@ -45,7 +45,7 @@ export default function NavHeader() {
               bg={"p.500"}
               minH={"100vh"}
               justify={"center"}
-              gap={8}
+              gap={6}
               px={"50px"}
               position={"relative"}
             >
@@ -108,7 +108,7 @@ export default function NavHeader() {
   if (sw < 920)
     return (
       <HStack h="72px" justify={"space-between"}>
-        <Image h="43px" src={logo} />
+        <Image h="43px" src={sw < 380 ? "/logoOnly.png" : logo} />
 
         <MobileDrawer />
       </HStack>

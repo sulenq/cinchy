@@ -11,7 +11,7 @@
   --p50: #f1f8ff;
   --p100: #c3f4db;
   --p200: #8ceac3;
-  --p200a: #8ceac353;
+  --p200a: #8ceac330;
   --p300: #4dc19c;
   --p400: #21846d;
   --p500: #00332c;
@@ -22,7 +22,7 @@
   --a50: #f1f8ff;
   --a100: #fef5d3;
   --a200: #fee9a8;
-  --a200a: #fdd87d40;
+  --a200a: #fdd97d24;
   --a300: #fdd87d;
   --a400: #fbc85d;
   --a500: #faae28;
@@ -35,27 +35,17 @@
   --divider2: #aeaeae30;
   --divider3: #aeaeaeaa;
   --trans: #ff000000;
+  --Snowgum-300: #e5e3e8;
+  --BG: #f2f7f5;
 }
 
 ::selection {
-  background: var(--p500);
+  background: var(--a500);
   color: white;
 }
 
 a {
   text-decoration: none !important;
-}
-
-p {
-  font-size: 13px;
-}
-
-label {
-  font-size: 13px !important;
-}
-
-button {
-  font-size: 13px !important;
 }
 
 .btn-p-outline {
@@ -116,20 +106,5 @@ input:focus-visible {
   }
   100% {
     opacity: 0.3;
-  }
-}
-
-@media screen and (min-width: 770px) {
-  p {
-    font-size: 15px;
-  }
-  label {
-    font-size: 15px !important;
-  }
-  button {
-    font-size: 14px !important;
-  }
-  input {
-    font-size: 14px !important;
   }
 }

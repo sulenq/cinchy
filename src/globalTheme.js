@@ -75,15 +75,17 @@ export const globalTheme = extendTheme({
     Menu: {
       baseStyle: (props) => ({
         list: {
-          bg: props.colorMode === "dark" ? "#050505cc" : "#ffffffcc",
-          backdropFilter: "blur(10px)",
-          border: "1px solid var(--divider)",
-          p: 0,
+          bg: props.colorMode === "dark" ? "black" : "p.500",
+          color: "wt",
+          border: "1px solid var(--p400)",
+          borderRadius: 20,
           overflow: "hidden",
+          p: 0,
         },
         item: {
           bg: "transparent",
-          _hover: { bg: "var(--divider)" },
+          p: 0,
+          _hover: { bg: "var(--divider) !important" },
         },
       }),
     },

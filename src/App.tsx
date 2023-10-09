@@ -1,77 +1,37 @@
-import {
-  Box,
-  ChakraProvider,
-  HStack,
-  Image,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, ChakraProvider, HStack, VStack } from "@chakra-ui/react";
 import { globalTheme } from "./globalTheme";
 import NavHeader from "./components/NavHeader";
 import Container from "./components/Container";
 import "./globalStyle.css";
+import FaqFilter from "./components/FaqFilter";
+import Hero from "./components/Hero";
+import Faq from "./components/Faq";
 
 export const App = () => {
   return (
     <ChakraProvider theme={globalTheme}>
-      <VStack align={"stretch"}>
+      <VStack minH={"100vh"} align={"stretch"} gap={0}>
         <Container>
           <NavHeader />
         </Container>
 
-        <Box position={"relative"}>
-          <Box
-            bgImage={"/img/bg.png"}
-            bgSize={"cover"}
-            w={"100%"}
-            h={"100%"}
-            position={"absolute"}
-            top={0}
-            left={0}
-            zIndex={-1}
-          />
-          <Box
-            w={"100%"}
-            h={"100%"}
-            bg={"#00332C"}
-            position={"absolute"}
-            top={0}
-            left={0}
-            mixBlendMode={"color"}
-            zIndex={-1}
-          />
-
-          <Container>
-            <SimpleGrid columns={[1, null, 2]} gap={8}>
-              <VStack
-                align={"flex-start"}
-                justify={"center"}
-                maxW={"401px"}
-                ml={[0, null, 16]}
-              >
-                <Text color={"wt"} fontSize={48} fontWeight={600}>
-                  Get Started
-                </Text>
-
-                <Text color={"wt"} fontSize={18}>
-                  Flight - confirmed! Hotel - sorted! And now, it's time to
-                  embark on your Bali Scooter Rental adventure! If you're still
-                  uncertain about your next steps, don’t worry, as we're here to
-                  address all your queries and concerns.
-                </Text>
-              </VStack>
-
-              <Image src="/img/person.png" display={["none", null, "block"]} />
-            </SimpleGrid>
-          </Container>
+        <Box id="hero" position={"relative"}>
+          <Hero />
         </Box>
 
-        <Container>
-          <HStack>
-            
-          </HStack>
-        </Container>
+        <Box id="faq" flex={1} bg={"var(--BG)"} pt={8}>
+          <Container>
+            <HStack
+              gap={8}
+              align={"flex-start"}
+              flexDir={["column", null, "row"]}
+            >
+              <FaqFilter position={"sticky"} top={[2, null, 8]} />
+
+              <Faq flex={1} />
+            </HStack>
+          </Container>
+        </Box>
       </VStack>
     </ChakraProvider>
   );
