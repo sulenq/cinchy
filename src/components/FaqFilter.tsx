@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaqData } from "../types";
 import useFaq from "../globalState/useFaq";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
@@ -19,11 +19,13 @@ import useScreenWidth from "../utils/useGetScreenWidth";
 
 export default function FaqFilter(props: any) {
   const bg = useColorModeValue("white", "black");
+  const sw = useScreenWidth();
   const [filterOptions, setFilterOptions] = useState<string[] | "loading">(
     "loading"
   );
+  const [menuListW, setMenuListW] = useState<number>(sw - 32);
   const { faqData, activeFaqFilter, setActiveFaqFlter, setFaqData } = useFaq();
-  const sw = useScreenWidth();
+  const faqFilterButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const getFilter = async () => {
@@ -50,6 +52,12 @@ export default function FaqFilter(props: any) {
     getFilter();
   }, [setFaqData]);
 
+  useEffect(() => {
+    if (faqFilterButtonRef.current) {
+      setMenuListW(faqFilterButtonRef.current?.offsetWidth);
+    }
+  }, [sw]);
+
   const handleSelectFilterOption = (filterOption: string) => {
     setActiveFaqFlter(filterOption);
   };
@@ -64,6 +72,7 @@ export default function FaqFilter(props: any) {
             return (
               <>
                 <MenuButton
+                  ref={faqFilterButtonRef}
                   w={"100%"}
                   borderRadius={20}
                   h={"56px"}
@@ -92,7 +101,7 @@ export default function FaqFilter(props: any) {
                   </HStack>
                 </MenuButton>
 
-                <MenuList p={0} minW={`${sw - 32}px`}>
+                <MenuList p={0} minW={`${menuListW}px`}>
                   <MenuItem>
                     <Box
                       w={"100%"}
@@ -108,7 +117,7 @@ export default function FaqFilter(props: any) {
                         bg={activeFaqFilter === "All" ? "p.600" : ""}
                         cursor={"pointer"}
                       >
-                        {`All (${faqData?.length})`}
+                        {`All (${faqData?.length || "calculating"})`}
                       </Text>
                     </Box>
                   </MenuItem>
