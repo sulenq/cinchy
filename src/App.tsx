@@ -11,9 +11,11 @@ export const App = () => {
   return (
     <ChakraProvider theme={globalTheme}>
       <VStack minH={"100vh"} align={"stretch"} gap={0}>
-        <Container>
-          <NavHeader />
-        </Container>
+        <nav id="nav">
+          <Container>
+            <NavHeader />
+          </Container>
+        </nav>
 
         <Box id="hero" position={"relative"}>
           <Hero />

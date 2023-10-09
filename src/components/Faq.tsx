@@ -11,15 +11,19 @@ import {
   Text,
 } from "@chakra-ui/react";
 import useFaq from "../globalState/useFaq";
+import useScreenWidth from "../utils/useGetScreenWidth";
 
 export default function Faq(props: any) {
   const { faqData, activeFaqFilter } = useFaq();
+  const sw = useScreenWidth();
 
   return (
     <Box {...props}>
-      <Heading fontSize={36} fontWeight={600} mb={4}>
-        {activeFaqFilter}
-      </Heading>
+      {sw >= 770 && (
+        <Heading fontSize={36} fontWeight={600} mb={4}>
+          {activeFaqFilter}
+        </Heading>
+      )}
 
       <Accordion allowMultiple w={"100%"}>
         {faqData?.map((f, i) => {

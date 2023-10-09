@@ -1,18 +1,19 @@
-import { Box, Image, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import Container from "./Container";
 
 export default function Hero() {
   return (
     <Box bgImage={"/img/bg.png"} bgSize={"cover"}>
       <Container>
-        <SimpleGrid columns={[1, null, 2]} gap={8}>
+        <HStack gap={8} justify={"space-around"}>
           <VStack
             align={"flex-start"}
             justify={"center"}
             maxW={"401px"}
-            ml={[0, null, 8]}
+            // ml={[0, null, 8]}
             flexShrink={0}
             py={24}
+            px={5}
             gap={0}
           >
             <Text
@@ -26,19 +27,20 @@ export default function Hero() {
             </Text>
 
             <Text color={"wt"} fontSize={18} lineHeight={"120%"}>
-              Flight - confirmed! Hotel - sorted! And now, it's time to embark
-              on your Bali Scooter Rental adventure! If you're still uncertain
-              about your next steps, don’t worry, as we're here to address all
-              your queries and concerns.
+              {
+                "Flight - confirmed! Hotel - sorted! And now, it's time to embark on your Bali Scooter Rental adventure! If you're still uncertain about your next steps, don’t worry, as we're here to address all your queries and concerns."
+              }
             </Text>
           </VStack>
 
           <Image
+            mt={8}
             src="/img/person.png"
+            w={"478px"}
             display={["none", null, "block"]}
             alignSelf={"flex-end"}
           />
-        </SimpleGrid>
+        </HStack>
       </Container>
     </Box>
   );

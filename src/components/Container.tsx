@@ -8,7 +8,7 @@ export default function Container(props: any) {
       className="container"
       align={"stretch"}
       w={"100%"}
-      maxW={"1440px"}
+      maxW={"1240px"}
       mx={"auto"}
       px={props.px || [4, null, 8]}
     >
