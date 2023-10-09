@@ -67,6 +67,7 @@ export default function NavHeader() {
                 overflow={"auto"}
                 gap={6}
                 p={"50px"}
+                // pb={'100px'}
               >
                 <Image
                   h="43px"
@@ -104,6 +105,12 @@ export default function NavHeader() {
                   Login
                 </SeccondaryOutlineButton>
               </VStack>
+
+              <Image
+                src="/img/bgNavMobile.png"
+                position={"absolute"}
+                bottom={0}
+              />
             </Box>
           </DrawerContent>
         </Drawer>
