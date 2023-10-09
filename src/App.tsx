@@ -24,7 +24,7 @@ export const App = () => {
           <Hero />
         </Box>
 
-        <Box id="faq" flex={1} bg={"var(--BG)"} pt={8}>
+        <Box id="faq" flex={1} bg={"var(--BG)"} pt={8} pb={4}>
           <Container>
             <HStack
               gap={8}
