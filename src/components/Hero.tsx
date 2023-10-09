@@ -11,7 +11,7 @@ export default function Hero() {
             justify={"center"}
             maxW={"401px"}
             // ml={[0, null, 8]}
-            flexShrink={0}
+            // flexShrink={0}
             py={24}
             px={5}
             gap={0}
@@ -36,7 +36,9 @@ export default function Hero() {
           <Image
             mt={8}
             src="/img/person.png"
-            w={"478px"}
+            maxW={"478px"}
+            w={"50%"}
+            flexShrink={1}
             display={["none", null, "block"]}
             alignSelf={"flex-end"}
           />

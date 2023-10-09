@@ -105,13 +105,13 @@ export default function NavHeader() {
                   Login
                 </SeccondaryOutlineButton>
               </VStack>
-
-              <Image
-                src="/img/bgNavMobile.png"
-                position={"absolute"}
-                bottom={0}
-              />
             </Box>
+
+            <Image
+              src="/img/bgNavMobile.png"
+              position={"absolute"}
+              bottom={0}
+            />
           </DrawerContent>
         </Drawer>
       </>

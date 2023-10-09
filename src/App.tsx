@@ -6,16 +6,19 @@ import "./globalStyle.css";
 import FaqFilter from "./components/FaqFilter";
 import Hero from "./components/Hero";
 import Faq from "./components/Faq";
+import useScreenWidth from "./utils/useGetScreenWidth";
 
 export const App = () => {
+  const sw = useScreenWidth();
+
   return (
     <ChakraProvider theme={globalTheme}>
       <VStack minH={"100vh"} align={"stretch"} gap={0}>
-        <nav id="nav">
+        <Box id="nav" position={"sticky"} top={0} zIndex={99} bg="white">
           <Container>
             <NavHeader />
           </Container>
-        </nav>
+        </Box>
 
         <Box id="hero" position={"relative"}>
           <Hero />
@@ -28,7 +31,10 @@ export const App = () => {
               align={"flex-start"}
               flexDir={["column", null, "row"]}
             >
-              <FaqFilter position={"sticky"} top={[2, null, 8]} />
+              <FaqFilter
+                position={"sticky"}
+                top={sw < 920 ? "80px" : "122px"}
+              />
 
               <Faq flex={1} />
             </HStack>
