@@ -38,7 +38,7 @@ export default function NavHeader() {
           onClick={onOpen}
         />
 
-        <Drawer isOpen={true} onClose={onClose} placement="right">
+        <Drawer isOpen={isOpen} onClose={onClose} placement="right">
           <DrawerOverlay />
 
           <DrawerContent>
