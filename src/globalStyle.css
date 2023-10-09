@@ -1,0 +1,135 @@
+* {
+  font-family: "Outfit", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ns {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+/* COLORS */
+:root {
+  --p50: #f1f8ff;
+  --p100: #c3f4db;
+  --p200: #8ceac3;
+  --p200a: #8ceac353;
+  --p300: #4dc19c;
+  --p400: #21846d;
+  --p500: #00332c;
+  --p600: #002b29;
+  --p700: #002224;
+  --p800: #00191d;
+  --p900: #001218;
+  --a50: #f1f8ff;
+  --a100: #fef5d3;
+  --a200: #fee9a8;
+  --a200a: #fdd87d40;
+  --a300: #fdd87d;
+  --a400: #fbc85d;
+  --a500: #faae28;
+  --a600: #d78c1d;
+  --a700: #b36e14;
+  --a800: #90520c;
+  --a900: #773e07;
+  --wt: #eeeeee;
+  --divider: #aeaeae20;
+  --divider2: #aeaeae30;
+  --divider3: #aeaeaeaa;
+  --trans: #ff000000;
+}
+
+::selection {
+  background: var(--p500);
+  color: white;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  font-size: 13px;
+}
+
+label {
+  font-size: 13px !important;
+}
+
+button {
+  font-size: 13px !important;
+}
+
+.btn-p-outline {
+  background: transparent !important;
+  border: 2px solid var(--p500);
+  color: var(--p500) !important;
+}
+.btn-p-outline:hover:not(:disabled) {
+  background: var(--p200a) !important;
+}
+.btn-solid {
+  background: var(--divider) !important;
+}
+.btn:hover:not(:disabled),
+.btn-solid:hover:not(:disabled) {
+  background: var(--divider2) !important;
+}
+.btn:active:not(:disabled),
+.btn-solid:active:not(:disabled) {
+  background: var(--divider2) !important;
+}
+
+.clicky:active:not(:disabled) {
+  transform: scale(0.95);
+}
+.sm-clicky:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+input {
+  border-radius: 4px !important;
+  outline: none !important;
+  border: 2px solid var(--divider) !important;
+  font-size: 14px !important;
+}
+input::placeholder {
+  /* opacity: 0.5; */
+  color: var(--divider3);
+}
+input:focus,
+input:focus-visible {
+  box-shadow: none !important;
+  border: 2px solid var(--p500) !important;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  p {
+    font-size: 15px;
+  }
+  label {
+    font-size: 15px !important;
+  }
+  button {
+    font-size: 14px !important;
+  }
+  input {
+    font-size: 14px !important;
+  }
+}
