@@ -1,4 +1,5 @@
 import {
+  Box,
   Drawer,
   DrawerContent,
   DrawerOverlay,
@@ -37,68 +38,73 @@ export default function NavHeader() {
           onClick={onOpen}
         />
 
-        <Drawer isOpen={isOpen} onClose={onClose} placement="right">
+        <Drawer isOpen={true} onClose={onClose} placement="right">
           <DrawerOverlay />
 
           <DrawerContent>
-            <VStack
-              bg={"p.500"}
-              minH={"100vh"}
-              justify={"center"}
-              gap={6}
-              px={"50px"}
-              position={"relative"}
-            >
-              <IconButton
-                aria-label="menuButton"
-                icon={<Icon as={CloseIcon} fontSize={30} />}
-                className="sm-clicky"
-                bg={"white"}
-                _hover={{ bg: "white" }}
-                _active={{ bg: "white" }}
-                color={"bt"}
-                borderRadius={"full"}
-                w={"50px"}
-                h={"50px"}
-                position={"absolute"}
-                left={"-25px"}
-                onClick={onClose}
-              />
-              <Image
-                h="43px"
-                src={"/logoDarkMode.png"}
-                objectFit={"contain"}
-                mb={12}
-              />
+            <IconButton
+              aria-label="menuButton"
+              icon={<Icon as={CloseIcon} fontSize={30} />}
+              className="sm-clicky"
+              bg={"white"}
+              _hover={{ bg: "white" }}
+              _active={{ bg: "white" }}
+              color={"bt"}
+              borderRadius={"full"}
+              w={"50px"}
+              h={"50px"}
+              position={"absolute"}
+              left={"-25px"}
+              top={"50%"}
+              onClick={onClose}
+              zIndex={99}
+            />
 
-              {headerNav.map((n, i) => (
-                <Text
-                  as={Link}
-                  key={i}
-                  className="ns"
-                  px={4}
-                  fontSize={24}
-                  _hover={{ opacity: 0.5 }}
-                >
-                  {n.name}
-                </Text>
-              ))}
+            <Box bg={"p.500"} position={"relative"} overflow={"auto"}>
+              <VStack
+                minH={"100vh"}
+                justify={"center"}
+                overflow={"auto"}
+                gap={6}
+                p={"50px"}
+              >
+                <Image
+                  h="43px"
+                  src={"/logoDarkMode.png"}
+                  objectFit={"contain"}
+                  mb={12}
+                />
 
-              {/* <ColorModeSwitcher
+                {headerNav.map((n, i) => (
+                  <Text
+                    as={Link}
+                    key={i}
+                    className="ns"
+                    px={4}
+                    fontSize={24}
+                    _hover={{ opacity: 0.5 }}
+                  >
+                    {n.name}
+                  </Text>
+                ))}
+
+                {/* <ColorModeSwitcher
                 borderRadius={"full"}
                 color={'wt'}
                 className="btn sm-clicky"
               /> */}
 
-              <SeccondaryOutlineButton
-                w={"180px"}
-                h={"50px"}
-                fontSize={"18px !important"}
-                mt={14}
-              >
-                Login
-              </SeccondaryOutlineButton>
-            </VStack>
+                <SeccondaryOutlineButton
+                  w={"180px"}
+                  h={"50px"}
+                  fontSize={"18px !important"}
+                  flexShrink={0}
+                  mt={14}
+                >
+                  Login
+                </SeccondaryOutlineButton>
+              </VStack>
+            </Box>
           </DrawerContent>
         </Drawer>
       </>
