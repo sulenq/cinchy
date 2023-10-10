@@ -144,7 +144,7 @@ export default function NavHeader() {
           </Text>
         ))}
 
-        <PrimaryOutlineButton>Login</PrimaryOutlineButton>
+        <PrimaryOutlineButton fontWeight={400}>Login</PrimaryOutlineButton>
       </HStack>
     </HStack>
   );
