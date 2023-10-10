@@ -27,9 +27,9 @@ export const App = () => {
         <Box id="faq" flex={1} bg={"var(--BG)"} pt={12} pb={4}>
           <Container>
             <HStack
-              gap={[4, null, '100px']}
+              gap={[sw < 920 ? 4 : "100px"]}
               align={"flex-start"}
-              flexDir={["column", null, "row"]}
+              flexDir={sw < 920 ? "column" : "row"}
             >
               <FaqFilter
                 position={"sticky"}

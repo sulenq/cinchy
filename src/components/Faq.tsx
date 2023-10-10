@@ -22,7 +22,7 @@ export default function Faq(props: any) {
   if (faqData?.length) {
     return (
       <Box {...props}>
-        {sw >= 770 && (
+        {sw >= 920 && (
           <Heading fontSize={36} fontWeight={600} mb={16}>
             {activeFaqFilter}
           </Heading>
@@ -51,7 +51,9 @@ export default function Faq(props: any) {
                         justify={"space-between"}
                         mb={"34px"}
                       >
-                        <Text fontSize={38}>{f.title}</Text>
+                        <Text fontSize={38} textAlign={"left"}>
+                          {f.title}
+                        </Text>
 
                         <Center bg={"var(--BG)"} p={2} borderRadius={"full"}>
                           <AccordionIcon />

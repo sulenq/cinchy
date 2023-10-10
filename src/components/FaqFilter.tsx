@@ -62,7 +62,7 @@ export default function FaqFilter(props: any) {
     setActiveFaqFlter(filterOption);
   };
 
-  if (sw < 770) {
+  if (sw < 920) {
     return (
       <HStack {...props} w={"100%"} mt={"-60px"} zIndex={2}>
         <Menu>
