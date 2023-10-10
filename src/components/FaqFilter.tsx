@@ -64,7 +64,7 @@ export default function FaqFilter(props: any) {
 
   if (sw < 920) {
     return (
-      <HStack {...props} w={"100%"} mt={"-60px"} zIndex={2}>
+      <HStack {...props} w={"100%"} mt={"-75px"} zIndex={2}>
         <Menu>
           {(props) => {
             const { isOpen, onClose } = props;
