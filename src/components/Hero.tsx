@@ -9,7 +9,7 @@ export default function Hero() {
           <VStack
             align={"flex-start"}
             justify={"center"}
-            maxW={"401px"}
+            maxW={[null, null, "401px"]}
             // ml={[0, null, 8]}
             // flexShrink={0}
             py={24}
