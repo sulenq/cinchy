@@ -41,7 +41,7 @@ export default function NavHeader() {
         <Drawer isOpen={isOpen} onClose={onClose} placement="right">
           <DrawerOverlay />
 
-          <DrawerContent>
+          <DrawerContent bg={"p.500"}>
             <IconButton
               aria-label="menuButton"
               icon={<Icon as={CloseIcon} fontSize={30} />}
@@ -60,7 +60,7 @@ export default function NavHeader() {
               zIndex={99}
             />
 
-            <Box bg={"p.500"} position={"relative"} overflow={"auto"}>
+            <Box position={"relative"} zIndex={2} overflow={"auto"}>
               <VStack
                 minH={"100vh"}
                 justify={"center"}
@@ -111,6 +111,7 @@ export default function NavHeader() {
               src="/img/bgNavMobile.webp"
               position={"absolute"}
               bottom={0}
+              zIndex={1}
             />
           </DrawerContent>
         </Drawer>
