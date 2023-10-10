@@ -91,7 +91,7 @@ export default function Faq(props: any) {
   }
 
   return (
-    <VStack {...props}>
+    <VStack {...props} w={"100%"} justify={"center"}>
       <Spinner />
     </VStack>
   );
