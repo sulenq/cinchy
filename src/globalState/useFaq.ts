@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { FaqData } from "../types";
 
-type ThisFaqData = {
+type FaqDatas = {
   faqData: FaqData[] | null;
   activeFaqFilter: string;
 };
@@ -10,9 +10,9 @@ type Actions = {
   setActiveFaqFlter: (faqFilter: string) => void;
 };
 
-const useFaq = create<ThisFaqData & Actions>((set) => ({
+const useFaq = create<FaqDatas & Actions>((set) => ({
   faqData: null,
-  activeFaqFilter: `All`,
+  activeFaqFilter: "All",
   setFaqData: (faqData) => set(() => ({ faqData: faqData })),
   setActiveFaqFlter: (faqFilter) => set(() => ({ activeFaqFilter: faqFilter })),
 }));

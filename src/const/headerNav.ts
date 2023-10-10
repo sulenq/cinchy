@@ -1,7 +1,4 @@
-export type HeaderNavItem = {
-  name: string;
-  link: string;
-};
+import { HeaderNavItem } from "../types";
 
 const headerNav: HeaderNavItem[] = [
   { name: "About Us", link: "" },
