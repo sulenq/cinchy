@@ -24,10 +24,10 @@ export const App = () => {
           <Hero />
         </Box>
 
-        <Box id="faq" flex={1} bg={"var(--BG)"} pt={8} pb={4}>
+        <Box id="faq" flex={1} bg={"var(--BG)"} pt={12} pb={4}>
           <Container>
             <HStack
-              gap={8}
+              gap={[4, null, '100px']}
               align={"flex-start"}
               flexDir={["column", null, "row"]}
             >

@@ -64,7 +64,7 @@ export default function FaqFilter(props: any) {
 
   if (sw < 770) {
     return (
-      <HStack {...props} w={"100%"} mt={"-70px"} zIndex={2}>
+      <HStack {...props} w={"100%"} mt={"-60px"} zIndex={2}>
         <Menu>
           {(props) => {
             const { isOpen, onClose } = props;
@@ -105,7 +105,7 @@ export default function FaqFilter(props: any) {
                   <MenuItem>
                     <Box
                       w={"100%"}
-                      borderBottom={"1px solid var(--p400)"}
+                      borderBottom={"1px solid var(--divider)"}
                       onClick={() => {
                         handleSelectFilterOption("All");
                         onClose();
@@ -130,7 +130,7 @@ export default function FaqFilter(props: any) {
                           key={i}
                           borderBottom={
                             i !== filterOptions.length - 1
-                              ? "1px solid var(--p400)"
+                              ? "1px solid var(--divider)"
                               : ""
                           }
                           onClick={() => {

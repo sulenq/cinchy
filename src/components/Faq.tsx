@@ -23,7 +23,7 @@ export default function Faq(props: any) {
     return (
       <Box {...props}>
         {sw >= 770 && (
-          <Heading fontSize={36} fontWeight={600} mb={4}>
+          <Heading fontSize={36} fontWeight={600} mb={16}>
             {activeFaqFilter}
           </Heading>
         )}
