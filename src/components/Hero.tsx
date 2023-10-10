@@ -3,7 +3,7 @@ import Container from "./Container";
 
 export default function Hero() {
   return (
-    <Box bgImage={"/img/bg.png"} bgSize={"cover"}>
+    <Box bgImage={"/img/bg.webp"} bgSize={"cover"}>
       <Container>
         <HStack gap={8} justify={"space-around"}>
           <VStack
@@ -35,7 +35,7 @@ export default function Hero() {
 
           <Image
             mt={8}
-            src="/img/person.png"
+            src="/img/person.webp"
             maxW={"478px"}
             w={"50%"}
             flexShrink={1}

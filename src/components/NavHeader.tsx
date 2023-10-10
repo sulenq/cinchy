@@ -21,7 +21,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { PrimaryOutlineButton, SeccondaryOutlineButton } from "./Buttons";
 
 export default function NavHeader() {
-  const logo = useColorModeValue("/logo.png", "/logoDarkMode.png");
+  const logo = useColorModeValue("/logo.webp", "/logoDarkMode.webp");
   const color = useColorModeValue("#00332C", "wt");
   const sw = useScreenWidth();
 
@@ -71,7 +71,7 @@ export default function NavHeader() {
               >
                 <Image
                   h="43px"
-                  src={"/logoDarkMode.png"}
+                  src={"/logoDarkMode.webp"}
                   objectFit={"contain"}
                   mb={12}
                 />
@@ -108,7 +108,7 @@ export default function NavHeader() {
             </Box>
 
             <Image
-              src="/img/bgNavMobile.png"
+              src="/img/bgNavMobile.webp"
               position={"absolute"}
               bottom={0}
             />
@@ -121,7 +121,7 @@ export default function NavHeader() {
   if (sw < 920)
     return (
       <HStack h="72px" justify={"space-between"}>
-        <Image h="43px" src={sw < 380 ? "/logoOnly.png" : logo} />
+        <Image h="43px" src={sw < 380 ? "/logoOnly.webp" : logo} />
 
         <MobileDrawer />
       </HStack>
