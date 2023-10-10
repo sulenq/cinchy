@@ -51,7 +51,11 @@ export default function Faq(props: any) {
                         justify={"space-between"}
                         mb={"34px"}
                       >
-                        <Text fontSize={38} textAlign={"left"}>
+                        <Text
+                          fontSize={38}
+                          textAlign={"left"}
+                          lineHeight={"120%"}
+                        >
                           {f.title}
                         </Text>
 
@@ -60,12 +64,18 @@ export default function Faq(props: any) {
                         </Center>
                       </HStack>
 
-                      <Text textAlign={"left"}>{f.shortInfo}</Text>
+                      <Text textAlign={"left"} lineHeight={"120%"}>
+                        {f.shortInfo}
+                      </Text>
                     </Box>
                   </AccordionButton>
 
                   <AccordionPanel p={6} mt={"-10px"}>
-                    <Text borderTop={"1px solid var(--p500)"} pt={"34px"}>
+                    <Text
+                      borderTop={"1px solid var(--p500)"}
+                      pt={"34px"}
+                      lineHeight={"120%"}
+                    >
                       {f.longInfo}
                     </Text>
                   </AccordionPanel>
